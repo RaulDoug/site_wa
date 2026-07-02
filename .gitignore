@@ -1,0 +1,8 @@
+# Node dependencies 
+node_modules/
+
+# Variaveis de ambiente e segredos (Security .env)
+.env
+
+# Docker Volume (DB local)
+wa_db_bkp/

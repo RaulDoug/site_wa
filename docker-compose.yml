@@ -2,7 +2,24 @@ version: "3.8"
 services:
   wa_db:
     image: mongo
+    container_name: wa_db_container
     ports:
       - "27017:27017"
     volumes:
       - "./wa_db_bkp:/data/db"
+    networks:
+      - wa_network
+
+  wa_api:
+    build: .
+    container_name: wa_api_container
+    ports:
+      - "3000:3000"
+    depends_on:
+      - wa_db
+    networks:
+      - wa_network
+
+  networks:
+    wa_network:
+      driver: bridge

@@ -1,0 +1,11 @@
+# Ignora a pasta de dados do banco de dados do Docker
+wa_db_bkp/
+
+# Ignora dependências locais do node
+node_modules/
+npm-debug.log
+
+# Ignora pastas de controle de versão e configurações locais
+.git/
+.gitignore
+.agents

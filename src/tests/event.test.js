@@ -7,6 +7,14 @@ import path from 'path';
 import app from '../app.js';
 import Event from '../models/eventModel.js';
 import User from '../models/userModel.js';
+import { vi } from 'vitest';
+
+vi.mock('../config/cloudinary.js', () => ({
+  upload: {
+    single: () => (req, res, next) => next()
+  },
+  deleteImage: vi.fn().mockResolvedValue({ result: 'ok' })
+}));
 
 describe('Testes da API de Eventos', () => {
   let token;
@@ -15,7 +23,7 @@ describe('Testes da API de Eventos', () => {
   // Conecta ao banco de dados antes de iniciar os testes
   beforeAll(async () => {
     // Carrega o .env manualmente se necessário
-    if (!process.env.MONGO_URL) {
+    if (!process.env.MONGO_URL_TEST) {
       try {
         const envPath = path.resolve(process.cwd(), '.env');
         if (fs.existsSync(envPath)) {
@@ -35,7 +43,7 @@ describe('Testes da API de Eventos', () => {
       }
     }
 
-    const mongoUrl = process.env.MONGO_URL;
+    const mongoUrl = process.env.MONGO_URL_TEST;
     if (!mongoose.connection.readyState) {
       await mongoose.connect(mongoUrl);
     }

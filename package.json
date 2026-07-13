@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon --env-file=.env src/server.js",
-    "test": "vitest run"
+    "test": "cross-env NODE_ENV=test vitest run"
   },
   "keywords": [],
   "author": "",

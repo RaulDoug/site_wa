@@ -14,6 +14,12 @@ app.use('/api/auth', userRoutes);
 app.use('/api', postRoutes);
 app.use('/api', eventRoutes);
 
+app.use((req, res, next) => {
+  const err = new Error(`Rota ${req.originalUrl} não encontrada`);
+  err.status = 404;
+  next(err);
+});
+
 app.use(errorHandler);
 
 export default app;

@@ -31,6 +31,7 @@ const rodarSeed = async () => {
         subtitle: 'Como reduzir impostos legalmente no próximo ano',
         content: 'O planejamento tributário é a melhor ferramenta para micro e pequenas empresas organizarem suas finanças e evitarem pagar impostos desnecessários...',
         imageUrl: 'https://imagens.com/blog/planejamento-tributario.jpg',
+        imagePublicId: null,
         author: 'Suporte Técnico WA',
         createdBy: autorId
       },
@@ -39,6 +40,7 @@ const rodarSeed = async () => {
         subtitle: 'Fique atento aos novos prazos e limites',
         content: 'O governo federal propôs novas regras de faturamento para o Microempreendedor Individual. Neste artigo, detalhamos o que muda para o seu negócio...',
         imageUrl: 'https://imagens.com/blog/mei-mudancas.jpg',
+        imagePublicId: null,
         author: 'Contabilidade WA',
         createdBy: autorId
       },
@@ -47,6 +49,7 @@ const rodarSeed = async () => {
         subtitle: 'Passo a passo simples para não fechar no vermelho',
         content: 'Misturar contas pessoais com as contas da empresa é o erro número um dos empreendedores. Entenda como separar o caixa de forma definitiva...',
         imageUrl: 'https://imagens.com/blog/fluxo-caixa.jpg',
+        imagePublicId: null,
         author: 'Contabilidade WA',
         createdBy: autorId
       }
@@ -58,6 +61,7 @@ const rodarSeed = async () => {
         title: 'Workshop: Declaração de Faturamento MEI',
         desc: 'Treinamento prático presencial para clientes da contabilidade organizarem seus relatórios anuais.',
         imageUrl: 'https://imagens.com/eventos/workshop-mei.jpg',
+        imagePublicId: null,
         eventLoc: 'Auditório Central - Bom Despacho',
         eventDate: new Date('2026-08-15T19:00:00Z'),
         createdBy: autorId
@@ -66,6 +70,7 @@ const rodarSeed = async () => {
         title: 'Palestra: Impactos da Reforma Tributária',
         desc: 'Uma análise profunda de como a transição dos novos impostos vai impactar o comércio local.',
         imageUrl: 'https://imagens.com/eventos/palestra-reforma.jpg',
+        imagePublicId: null,
         eventLoc: 'Associação Comercial',
         eventDate: new Date('2026-09-10T14:30:00Z'),
         createdBy: autorId
@@ -74,6 +79,7 @@ const rodarSeed = async () => {
         title: 'Consultoria Coletiva: Planejamento de Fim de Ano',
         desc: 'Rodada de perguntas e respostas exclusiva para traçar metas fiscais antes do fechamento do ano.',
         imageUrl: 'https://imagens.com/eventos/consultoria-coletiva.jpg',
+        imagePublicId: null,
         eventLoc: 'Sala de Reuniões WA Contabilidade',
         eventDate: new Date('2026-11-05T09:00:00Z'),
         createdBy: autorId

@@ -16,6 +16,8 @@ services:
       - "3000:3000"
     depends_on:
       - wa_db
+    env_file:
+      - .env
     networks:
       - wa_network
 

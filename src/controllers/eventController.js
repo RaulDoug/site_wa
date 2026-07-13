@@ -9,7 +9,7 @@ export default class EventController extends BaseController {
 
   createEvent = async (req, res, next) => {
     try {
-      const { title, desc, eventLoc, eventDate } = req.body;
+      const { title, desc, eventLoc, eventDate, whatsappLink } = req.body;
       const imageUrl = req.file ? req.file.path : null;
       const imagePublicId = req.file ? req.file.filename : null;
       const createdBy = req.loggedUserId;
@@ -20,6 +20,7 @@ export default class EventController extends BaseController {
         imageUrl,
         imagePublicId,
         eventLoc,
+        whatsappLink,
         eventDate,
         createdBy
       });

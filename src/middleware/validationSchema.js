@@ -13,6 +13,7 @@ export const eventValidationSchema = z.object({
   desc: z.string({ required_error: 'O campo de descrição do evento é obrigatório' }).trim().min(5, 'Descrição muito curta'),
   imageUrl: z.string().url('A url da imagem é inválida').or(z.literal('')).optional(),
   eventLoc: z.string({ required_error: 'A localização do evento é obrigatória' }).trim().min(1, 'A localização do evento é obrigatória'),
+  whatsappLink: z.string().url('Link do WhatsApp inválido').or(z.literal('')).optional(),
   eventDate: z.coerce.date({
     required_error: 'A data é um campo obrigatório',
     invalid_type_error: 'Data inválida'

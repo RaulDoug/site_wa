@@ -16,6 +16,10 @@ const eventSchema = new Schema({
     type: String,
     required: true
   },
+  whatsappLink: {
+    type: String,
+    required: false
+  },
   eventDate: {
     type: Date,
     required: true

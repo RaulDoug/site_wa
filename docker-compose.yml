@@ -5,7 +5,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - "./wa_db_bkp:/data/db"
+      - wa_db_data:/data/db
     networks:
       - wa_network
 
@@ -22,3 +22,6 @@ services:
 networks:
   wa_network:
     driver: bridge
+
+volumes:
+  wa_db_data:

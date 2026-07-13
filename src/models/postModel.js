@@ -12,6 +12,7 @@ const postSchema = new Schema({
     required: true,
   },
   imageUrl: String,
+  imagePublicId: String,
   author: {
     type: String,
     required: true

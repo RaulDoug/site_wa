@@ -11,6 +11,7 @@ const eventSchema = new Schema({
     required: true
   },
   imageUrl: String,
+  imagePublicId: String,
   eventLoc: {
     type: String,
     required: true

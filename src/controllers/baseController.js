@@ -1,3 +1,5 @@
+import { cloudinary } from '../config/cloudinary';
+
 export default class BaseController {
   constructor(model) {
     this.model = model;
@@ -84,5 +86,4 @@ export default class BaseController {
       next(error);
     }
   };
-
 };

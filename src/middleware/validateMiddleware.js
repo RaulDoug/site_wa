@@ -5,7 +5,7 @@ export const validateValues = (zodSchema) => {
     if (!validate.success) {
       return res.status(400).json({
         error: 'Dados inválidos',
-        details: validate.error.errors.map(err => ({
+        details: validate.error.issues.map(err => ({
           field: err.path.join('.'),
           message: err.message
         }))
